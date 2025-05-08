@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Abdoul Malik KONDI</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-500 font-sans">
+  <!-- Toggle theme -->
+  <div class="absolute top-4 right-4">
+    <button onclick="document.documentElement.classList.toggle('dark')" class="bg-gray-200 dark:bg-gray-700 p-2 rounded-full hover:scale-110 transition">
+      🌓
+    </button>
+  </div>
 
   <!-- Header -->
-  <header class="bg-gray-800 p-6 shadow-md">
+  <header class="bg-gray-100 dark:bg-gray-800 p-6 shadow-md">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">Abdoul Malik KONDI</h1>
-      <a href="https://github.com/amk-7" target="_blank" class="text-blue-400 hover:underline">GitHub</a>
+      <a href="https://github.com/amk-7" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">GitHub</a>
     </div>
   </header>
 
@@ -20,48 +31,55 @@
   <section class="text-center py-16">
     <img src="https://github.com/amk-7.png" alt="avatar" class="w-32 h-32 rounded-full mx-auto border-4 border-blue-500" />
     <h2 class="mt-4 text-3xl font-bold">Développeur passionné</h2>
-    <p class="text-gray-400 mt-2">💻 Java | Laravel | Python | Next.js | Docker</p>
-    <p class="text-sm text-gray-500 mt-1">📍 Lome, Togo</p>
+    <p class="text-gray-600 dark:text-gray-400 mt-2">💻 Java | Laravel | Python | Next.js | Docker</p>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">📍 Lome, Togo</p>
+    <img src="https://undraw.co/api/illustrations/0f6f28b4-8930-4b3e-9a62-1213bc1013b2" alt="Coding Illustration" class="w-2/3 md:w-1/3 mx-auto mt-6">
   </section>
 
   <!-- About -->
   <section class="max-w-4xl mx-auto px-4 py-10">
-    <h3 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">À propos</h3>
-    <p class="text-gray-300 leading-relaxed">
-      Je suis un développeur passionné actuellement en stage à l'IFNTI de Sokodé. J’aime travailler sur des projets open-source, collaborer autour de Node.js, Laravel ou Python, et je déploie mes apps avec Docker.
+    <h3 class="text-2xl font-semibold mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">À propos</h3>
+    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+      Je suis un développeur passionné actuellement employé à l'IFNTI de Sokodé. J’aime travailler sur des projets open-source, collaborer autour de Node.js, Laravel ou Python, et je déploie mes apps avec Docker.
     </p>
   </section>
 
   <!-- Projects -->
   <section class="max-w-6xl mx-auto px-4 py-10">
-    <h3 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">Projets récents</h3>
+    <h3 class="text-2xl font-semibold mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Projets récents</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Project Card -->
-      <div class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-lg transition">
-        <h4 class="text-lg font-semibold">WETUBE</h4>
-        <p class="text-gray-400">Clone de YouTube en Node.js</p>
-        <a href="https://github.com/amk-7/WETUBE" target="_blank" class="text-blue-400 hover:underline mt-2 inline-block">Voir le repo</a>
+      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-lg font-semibold">Médiatheque</h4>
+        <p class="text-gray-600 dark:text-gray-400">Clone de YouTube en Node.js</p>
+        <a href="https://github.com/amk-7/WETUBE" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">Voir le repo</a>
       </div>
-      <div class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
         <h4 class="text-lg font-semibold">gestion_contact</h4>
-        <p class="text-gray-400">Application de gestion de contact (Django)</p>
-        <a href="https://github.com/amk-7/gestion_contact" target="_blank" class="text-blue-400 hover:underline mt-2 inline-block">Voir le repo</a>
+        <p class="text-gray-600 dark:text-gray-400">Application de gestion de contact (Django)</p>
+        <a href="https://github.com/amk-7/gestion_contact" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">Voir le repo</a>
       </div>
-      <div class="bg-gray-800 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
         <h4 class="text-lg font-semibold">convert-To</h4>
-        <p class="text-gray-400">Convertisseur de fichiers (Python)</p>
-        <a href="https://github.com/amk-7/convert-To" target="_blank" class="text-blue-400 hover:underline mt-2 inline-block">Voir le repo</a>
+        <p class="text-gray-600 dark:text-gray-400">Convertisseur de fichiers (Python)</p>
+        <a href="https://github.com/amk-7/convert-To" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">Voir le repo</a>
+      </div>
+      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-lg font-semibold">Gestion-IFNTI</h4>
+        <p class="text-gray-600 dark:text-gray-400">Convertisseur de fichiers (Python)</p>
+        <a href="https://github.com/amk-7/convert-To" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">Voir le repo</a>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="bg-gray-800 py-10 mt-10 text-center">
+  <section class="bg-gray-100 dark:bg-gray-800 py-10 mt-10 text-center">
     <h3 class="text-xl font-bold mb-4">📫 Me contacter</h3>
-    <p class="text-gray-300">abdoulmalikkondi8@gmail.com</p>
+    <p class="text-gray-700 dark:text-gray-300">abdoulmalikkondi8@gmail.com</p>
+    <img src="https://undraw.co/api/illustrations/5eb2df4e-4937-4c26-a02f-47e82a0bd6a3" alt="Contact Illustration" class="w-2/3 md:w-1/3 mx-auto mt-6">
   </section>
 
-  <footer class="text-center py-6 text-gray-600 text-sm">
+  <footer class="text-center py-6 text-gray-500 dark:text-gray-400 text-sm">
     © 2025 Abdoul Malik KONDI
   </footer>
 </body>
